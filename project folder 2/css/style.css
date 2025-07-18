@@ -1,0 +1,521 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("../images/Background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(203, 166, 96, 0.37); /* Light orangish overlay */
+  color: #333;
+}
+
+
+  
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ 
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  flex: 0; /* Ensures the logo stays on the left */
+}
+
+nav .logo img {
+  height: 90px;
+  transition: transform 0.5s;
+}
+
+nav .logo img:hover {
+  transform: scale(2.2);
+}
+
+/* Navigation items to the right */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* This pushes the navigation links to the right */
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0); /* Base color for links */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  color: yellow; /* Yellow hover color */
+}
+
+/* Active link color */
+nav ul li a.active {
+  color: #28a745; /* Green active color */
+}
+
+/* Force all link states to be grey */
+nav ul li a:link,
+nav ul li a:visited {
+  color: rgb(0, 0, 0);
+}
+
+/* Hover = Yellow */
+nav ul li a:hover {
+  color: rgb(150, 150, 47);
+}
+
+/* Optional: keep yellow on active too */
+nav ul li a:active {
+  color: yellow;
+}
+
+
+/* -------------------- GALLERY PAGE STYLES -------------------- */
+
+/* Gallery Section */
+.gallery-page {
+  margin-top: 1px; /* Space to avoid navbar overlap */
+  padding: 200px;
+}
+
+.gallery-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1000px;
+  margin-top: 100px;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Zoom effect on image hover */
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+  
+  /* Welcome Section */
+  header {
+    text-align: center;
+    padding-top: 100px; /* Adjusted for fixed navbar */
+  }
+  
+  .welcome-text {
+    font-size: 3rem;
+    color: #000000; /* yellow color */
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+    color: #838080;
+  }
+  
+  /* Welcome Text Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation to the gallery heading */
+  .gallery-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    animation: fadeInFromTop 3.5s ease-out;
+  }
+  
+  /* Restaurant Photos Section */
+  .restaurant-photos {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .restaurant-photos h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .photo-gallery img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(1.5);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: black;
+  }
+  
+  footer a {
+    color: #28a745;
+    text-decoration: none;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  footer {
+    margin-top: 130px;
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  a:link {
+    color: blue;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  /* Gallery Section */
+.gallery-page {
+  padding: 110px 350px;
+  text-align: center;
+  background-color: #eccaa400; /* light orangish blend */
+}
+
+.gallery-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 90px;
+  max-width: 1200px;
+  margin: 60 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+  
+  form {
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #444;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+  }
+  
+  th, td {
+    text-align: center;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  a:visited {
+    color: #6f42c1;
+  }
+  /* About Page Styles */
+.about-section {
+  padding: 120px 20px 50px; /* top padding for navbar */
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 100px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-content img {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.table-page {
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.menu-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000000; /* green tone for Mama's Kitchen */
+  opacity: 0;
+  animation: fadeDown 2.5s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fancy-menu {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fancy-menu thead {
+  background-color: #f0892c; /* orangish like logo */
+  color: white;
+}
+
+.fancy-menu th,
+.fancy-menu td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.fancy-menu tbody tr:nth-child(even) {
+  background-color: #fff3e6;
+}
+
+.fancy-menu tbody tr:nth-child(odd) {
+  background-color: #ffe9d1;
+}
+
+.fancy-menu tbody tr:hover {
+  background-color: #fce3ba;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* Animate from bottom up */
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-up {
+  animation: slideUpFade 1s ease-out forwards;
+}
+
+/* Heading style */
+.contact-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  color: #28a745;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Contact Form Styling */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs and Textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #28a745;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #218838;
+}
+/* Image Hover Effect */
+.gallery img, .restaurant-photos img {
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover, .restaurant-photos img:hover {
+  transform: scale(1.1); /* This will zoom the image */
+}
+
+
